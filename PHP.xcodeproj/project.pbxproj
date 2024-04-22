@@ -12,6 +12,7 @@
 		3D89A7F92BD65E4100F7C288 /* Prog3.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Prog3.php; sourceTree = "<group>"; };
 		3D89A7FA2BD65E7900F7C288 /* Prog4.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Prog4.php; sourceTree = "<group>"; };
 		3D89A7FB2BD65EAB00F7C288 /* Prog5.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Prog5.php; sourceTree = "<group>"; };
+		3D89DDB42BD6E843006880E9 /* Prog6.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Prog6.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -23,6 +24,7 @@
 				3D89A7F92BD65E4100F7C288 /* Prog3.php */,
 				3D89A7FA2BD65E7900F7C288 /* Prog4.php */,
 				3D89A7FB2BD65EAB00F7C288 /* Prog5.php */,
+				3D89DDB42BD6E843006880E9 /* Prog6.php */,
 			);
 			sourceTree = "<group>";
 		};
