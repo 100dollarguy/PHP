@@ -1,3 +1,6 @@
+//Write a PHP script to find odd or even number from given number.
+
+
 <?php
 $x = 26;
 echo "Input Number: ", $x, "\n";
