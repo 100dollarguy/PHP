@@ -1,3 +1,6 @@
+//Write a PHP script to swap two numbers.
+
+
 <?php
 $a = 15;
 $b = 27;
