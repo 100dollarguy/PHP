@@ -21,4 +21,4 @@ $example = new Example();
 echo "End of script.\n";
 
 ?>
-
+x
