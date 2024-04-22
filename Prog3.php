@@ -1,3 +1,5 @@
+//Write a PHP script to find maximum of three numbers.
+
 <?php
 function largest($x, $y, $z) {
     $max = $x;
