@@ -1,3 +1,5 @@
+//Write a PHP script to find factorial of a number.
+
 <?php
 $num = 5;
 $factorial = 1;
