@@ -26,6 +26,7 @@
 		3D9B4A252BD75E0F00907163 /* Prog17.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Prog17.php; sourceTree = "<group>"; };
 		3D9B4A262BD75F1500907163 /* Prog18.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Prog18.php; sourceTree = "<group>"; };
 		3D9B4A272BD760D200907163 /* Prog19.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Prog19.php; sourceTree = "<group>"; };
+		3D9B4A282BD7623400907163 /* Prog20.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Prog20.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -34,6 +35,7 @@
 			children = (
 				3D9B4A212BD75BBA00907163 /* Prog13.php */,
 				3D89A7F72BD65C4300F7C288 /* Prog1.php */,
+				3D9B4A282BD7623400907163 /* Prog20.php */,
 				3D9B4A272BD760D200907163 /* Prog19.php */,
 				3D9B4A262BD75F1500907163 /* Prog18.php */,
 				3D9B4A252BD75E0F00907163 /* Prog17.php */,
