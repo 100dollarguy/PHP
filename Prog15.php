@@ -1,4 +1,4 @@
-//Write a PHP script that receive string as a form input
+
 
 <!DOCTYPE html>
 <html>
@@ -15,6 +15,7 @@
 </form>
 
 <?php
+//Write a PHP script that receive string as a form input
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if input_string is set and not empty

@@ -1,7 +1,7 @@
-//Write a PHP script to to generate a Fibonacci series using Recursive function.
+
 
 <?php
-
+//Write a PHP script to to generate a Fibonacci series using Recursive function.
 function fibonacci($n) {
     if ($n <= 1) {
         return $n;

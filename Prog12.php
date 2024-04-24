@@ -1,4 +1,4 @@
-//Write a PHP script to implement form handling using get method
+
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +16,7 @@
 </form>
 
 <?php
+//Write a PHP script to implement form handling using get method
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Check if name and email are set and not empty

@@ -1,4 +1,4 @@
-//Write a PHP script to show the functionality of date and time function.
+
 
 <!DOCTYPE html>
 <html>
@@ -9,6 +9,7 @@
 
 <h2>Current Date and Time:</h2>
 <?php
+//Write a PHP script to show the functionality of date and time function.
 // Display current date and time
 echo "<p>Current Date: " . date("Y-m-d") . "</p>";
 echo "<p>Current Time: " . date("H:i:s") . "</p>";

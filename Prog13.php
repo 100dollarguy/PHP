@@ -1,4 +1,3 @@
-//Write a PHP script to implement form handling using post method.
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +15,7 @@
 </form>
 
 <?php
+//Write a PHP script to implement form handling using post method.
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if name and email are set and not empty

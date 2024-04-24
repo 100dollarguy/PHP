@@ -1,6 +1,7 @@
-//Write a PHP program to insert new item in array on any position in PHP.
+
 
 <?php
+//Write a PHP program to insert new item in array on any position in PHP.
 
 // Original array
 $originalArray = array("apple", "banana", "cherry", "date");

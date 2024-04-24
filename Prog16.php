@@ -1,4 +1,4 @@
-//Write a PHP script to compute addition of two matrices as a form input.
+
 
 <!DOCTYPE html>
 <html>
@@ -24,6 +24,7 @@
 </form>
 
 <?php
+//Write a PHP script to compute addition of two matrices as a form input.
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if all matrix elements are set and not empty

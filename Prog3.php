@@ -1,6 +1,7 @@
-//Write a PHP script to find maximum of three numbers.
+
 
 <?php
+//Write a PHP script to find maximum of three numbers.
 function largest($x, $y, $z) {
     $max = $x;
     if ($x >= $y && $x >= $z)

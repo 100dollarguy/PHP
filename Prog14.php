@@ -1,4 +1,4 @@
-//Write a PHP script that receive form input by the method post to check the number is prime or no
+
 
 
 <!DOCTYPE html>
@@ -16,6 +16,7 @@
 </form>
 
 <?php
+//Write a PHP script that receive form input by the method post to check the number is prime or no
 // Function to check if a number is prime
 function isPrime($num) {
     if ($num <= 1) {

@@ -1,6 +1,7 @@
-//Write a PHP script to implement atleast seven string functions.
+
 
 <?php
+//Write a PHP script to implement atleast seven string functions.
 
 // Original string
 $string = "Hello, World!";

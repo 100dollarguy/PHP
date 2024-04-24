@@ -1,6 +1,6 @@
-//Write a PHP script to implement database creation
 
 <?php
+//Write a PHP script to implement database creation
 // Database configuration
 $servername = "localhost";
 $username = "root";

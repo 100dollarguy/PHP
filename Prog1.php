@@ -1,4 +1,4 @@
-//Write a PHP script to print "hello world."
+
 
 <!DOCTYPE html>
 <html>
@@ -7,6 +7,7 @@
 </head>
 <body>
 <?php
+//Write a PHP script to print "hello world."
 echo "Hello World!";
 ?>
 </body>

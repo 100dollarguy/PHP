@@ -1,6 +1,7 @@
-//Write a PHPscript to check whether given number is palindrome or not.
+
 
 <?php
+//Write a PHPscript to check whether given number is palindrome or not.
 
 function isPalindrome($number) {
     $originalNumber = $number;

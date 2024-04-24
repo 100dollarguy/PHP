@@ -1,6 +1,7 @@
-//Write a PHP script to find factorial of a number.
+
 
 <?php
+//Write a PHP script to find factorial of a number.
 $num = 5;
 $factorial = 1;
 

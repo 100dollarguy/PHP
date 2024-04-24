@@ -1,7 +1,7 @@
-//Write a PHP script to implement constructor and destructor
+
 
 <?php
-
+//Write a PHP script to implement constructor and destructor
 class Example {
     // Constructor
     public function __construct() {

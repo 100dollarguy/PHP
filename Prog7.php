@@ -1,6 +1,7 @@
-//Write a PHP script to reverse a given number and calculate its sum.
+
 
 <?php
+//Write a PHP script to reverse a given number and calculate its sum.
 
 function reverseNumber($number) {
     $reverse = 0;
