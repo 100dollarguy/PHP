@@ -1,7 +1,4 @@
-
-
 <?php
-//Write a PHP script to to generate a Fibonacci series using Recursive function.
 function fibonacci($n) {
     if ($n <= 1) {
         return $n;
@@ -10,9 +7,8 @@ function fibonacci($n) {
     }
 }
 
-// Prompt user for input
-echo "Enter the number of terms in the Fibonacci series: ";
-$terms = intval(readline());
+// Specify the number of terms
+$terms = 10; // Change this to the desired number of terms
 
 echo "Fibonacci series with $terms terms: ";
 for ($i = 0; $i < $terms; $i++) {
@@ -21,6 +17,4 @@ for ($i = 0; $i < $terms; $i++) {
         echo ", ";
     }
 }
-
 ?>
-
