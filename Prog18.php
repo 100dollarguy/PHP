@@ -7,8 +7,8 @@
 
 <h2>Upload a File</h2>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
-    Select File: <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
+    Select File: <input type="file" name="fileToUpload" id="fileToUpload" required><br><br>
     <input type="submit" value="Upload File" name="submit">
 </form>
 
@@ -18,6 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if file is selected
     if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] == UPLOAD_ERR_OK) {
         $targetDirectory = "uploads/";
+
+        // Ensure the target directory exists and is writable
+        if (!file_exists($targetDirectory)) {
+            mkdir($targetDirectory, 0755, true);
+        }
+
         $targetFile = $targetDirectory . basename($_FILES["fileToUpload"]["name"]);
 
         // Check if file already exists
@@ -26,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Move the uploaded file to the specified directory
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)) {
-                echo "<p>The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.</p>";
+                echo "<p>The file ". basename($_FILES["fileToUpload"]["name"]). " has been uploaded.</p>";
             } else {
                 echo "<p>Sorry, there was an error uploading your file.</p>";
             }
@@ -44,3 +50,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
