@@ -1,53 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>File Upload</title>
+    <title>File Upload Form</title>
 </head>
 <body>
+    <h1>File Upload Form</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">Select a file to upload:</label>
+        <input type="file" name="file" id="file">
+        <input type="submit" name="submit" value="Upload File">
+    </form>
 
-<h2>Upload a File</h2>
-
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data">
-    Select File: <input type="file" name="fileToUpload" id="fileToUpload" required><br><br>
-    <input type="submit" value="Upload File" name="submit">
-</form>
-
-<?php
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if file is selected
-    if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] == UPLOAD_ERR_OK) {
-        $targetDirectory = "uploads/";
-
-        // Ensure the target directory exists and is writable
-        if (!file_exists($targetDirectory)) {
-            mkdir($targetDirectory, 0755, true);
-        }
-
-        $targetFile = $targetDirectory . basename($_FILES["fileToUpload"]["name"]);
-
-        // Check if file already exists
-        if (file_exists($targetFile)) {
-            echo "<p>Sorry, file already exists.</p>";
+    <?php
+    if (isset($_POST['submit'])) {
+        $file = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
+        // Specify the directory where the file will be uploaded
+        $uploadDirectory = "/Users/grery/Documents/XAMPP/htdocs/TestFolder/";
+        // Move the uploaded file to the specified directory
+        if (move_uploaded_file($fileTmpName, $uploadDirectory . $file)) {
+            echo "<p>File uploaded successfully: $file</p>";
         } else {
-            // Move the uploaded file to the specified directory
-            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)) {
-                echo "<p>The file ". basename($_FILES["fileToUpload"]["name"]). " has been uploaded.</p>";
-            } else {
-                echo "<p>Sorry, there was an error uploading your file.</p>";
-            }
-        }
-    } else {
-        // Check if file upload error occurred
-        if ($_FILES["fileToUpload"]["error"] == UPLOAD_ERR_NO_FILE) {
-            echo "<p>Please select a file to upload.</p>";
-        } else {
-            echo "<p>Sorry, there was an error uploading your file. Error code: " . $_FILES["fileToUpload"]["error"] . "</p>";
+            echo "<p>Failed to upload file.</p>";
         }
     }
-}
-?>
-
+    ?>
 </body>
 </html>
-

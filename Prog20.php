@@ -1,10 +1,9 @@
 <?php
-// Write a PHP script to create a table
-
+// Database connection parameters
 $servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database_name";
+$username = "root";
+$password = ""; // Removed unnecessary single quote
+$dbname = "collegedatabase";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,19 +14,22 @@ if ($conn->connect_error) {
 }
 
 // SQL to create table
-$sql = "CREATE TABLE users (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(30) NOT NULL,
-    lastname VARCHAR(30) NOT NULL,
-    email VARCHAR(50),
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+$sql = "CREATE TABLE student (
+    rollno INT(6) PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    age INT,
+    course VARCHAR(50),
+    dob DATE
 )";
 
+// Execute SQL query to create table
 if ($conn->query($sql) === TRUE) {
-    echo "Table users created successfully";
+    echo "Table 'student' created successfully";
 } else {
     echo "Error creating table: " . $conn->error;
 }
 
+// Close connection
 $conn->close();
 ?>
+
