@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Create table named college_admission_form
-$sql = "CREATE TABLE college_admission_form (
+$sql = "CREATE TABLE IF NOT EXISTS college_admission_form (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,

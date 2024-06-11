@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // SQL to create table
-$sql = "CREATE TABLE student (
+$sql = "CREATE TABLE IF NOT EXISTS student (
     rollno INT(6) PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     age INT,
