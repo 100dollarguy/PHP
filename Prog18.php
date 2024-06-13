@@ -5,7 +5,7 @@ if(isset($_FILES['image'])) {
     $file_size = $_FILES['image']['size'];
     $file_tmp = $_FILES['image']['tmp_name'];
     $file_type = $_FILES['image']['type'];
-    $file_ext = strtolower(end(explode('.', $file_name))); // Fixed the variable name here
+    $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION)); // Using pathinfo() function to get file extension
     $allowed_extensions = array("jpeg", "jpg", "png");
 
     if(!in_array($file_ext, $allowed_extensions)) {
@@ -34,7 +34,7 @@ if(isset($_FILES['image'])) {
 ?>
 <html>
 <body>
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
     <input type="file" name="image" />
     <input type="submit" value="Upload" />
 </form>
